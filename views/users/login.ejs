@@ -1,0 +1,54 @@
+<%- include('../partials/header.ejs') %>
+    <!-- Sign In Modal-->
+    <div class="modal fade show my-5 pt-5" id="signin-modal" tabindex="-1" style="display: block;position: relative;"
+        aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered p-2 my-0 mx-auto" style="max-width: 950px;">
+            <div class="modal-content">
+                <div class="modal-body px-0 py-2 py-sm-0">
+                    <a class="btn-close position-absolute top-0 end-0 mt-3 me-3" type="button" href="/"></a>
+                    <div class="row mx-0 align-items-center">
+                        <div class="col-md-6 border-end-md p-4 p-sm-5">
+                            <h2 class="h3 mb-4 mb-sm-5">Meraba!<br>Tekrar Hoşgeldin.</h2><img class="d-block mx-auto"
+                                src="img/signin-modal/signin.svg" alt="Illustration" width="344">
+                            <div class="mt-4 mt-sm-5">Üye değil misin? <a href="/register">Üye Ol</a></div>
+                        </div>
+                        <div class="col-md-6 px-4 pt-2 pb-4 px-sm-5 pb-sm-5 pt-md-5"><a
+                                class="btn btn-outline-info rounded-pill w-100 mb-3" href="#"><i
+                                    class="fi-google fs-lg me-1"></i>Google ile Giriş Yap</a><a
+                                class="btn btn-outline-info rounded-pill w-100 mb-3" href="#"><i
+                                    class="fi-facebook fs-lg me-1"></i>Facebook ile Giriş Yap</a>
+                            <div class="d-flex align-items-center py-3 mb-3">
+                                <hr class="w-100">
+                                <div class="px-3">ya da</div>
+                                <hr class="w-100">
+                            </div>
+                            <form action="/login" method="post" class="needs-validation" novalidate="">
+                                <div class="mb-4">
+                                    <label class="form-label mb-2" for="signin-email">E-mail</label>
+                                    <input class="form-control" type="email" id="signin-email"
+                                        placeholder="E-mail adresinizi giriniz" required name="username">
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <label class="form-label mb-0" for="signin-password">Şifre</label><a
+                                            class="fs-sm" href="#">Şifremi unuttum?</a>
+                                    </div>
+                                    <div class="password-toggle">
+                                        <input class="form-control" type="password" id="signin-password"
+                                            placeholder="Şifrenizi giriniz" required="" name="password">
+
+                                        <label class="password-toggle-btn" aria-label="Show/hide password">
+                                            <input class="password-toggle-check" type="checkbox"><span
+                                                class="password-toggle-indicator"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Giriş yap" class="btn btn-primary btn-lg rounded-pill w-100">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer.ejs') %>

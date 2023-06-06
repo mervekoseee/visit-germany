@@ -1,0 +1,283 @@
+<%- include('./partials/header.ejs') %>
+
+
+    <!-- Hero-->
+    <section class="container py-5 mt-5 mb-lg-3">
+        <div class="row align-items-center mt-md-2">
+            <div class="col-lg-5 order-lg-1 pe-lg-0">
+                <h1 class="display-5 mb-4 me-lg-n5 text-lg-start text-center mb-4">Keşfetmeye
+                    <span class="dropdown d-inline-block">
+                        <a class=" text-decoration-none" href="/hotels" role="button" aria-haspopup="true" aria-expanded="false">Bizimle Başla!</a>
+                    </span>
+                </h1>
+                <p class="text-lg-start text-center mb-4 mb-lg-5 fs-lg">İstediğin otel fırsatlarını keşfet ve yerini hemen ayırt!</p>
+                <!-- Search form-->
+                <div class="me-lg-n5">
+                    <form class="form-group d-block d-md-flex position-relative rounded-md-pill me-lg-n5">
+                        <div class="input-group input-group-lg border-end-md"><span
+                                class="input-group-text text-muted rounded-pill ps-3"><i class="fi-search"></i></span>
+                            <input class="form-control" type="text" placeholder="Nereye gitmek istersin?">
+                        </div>
+                        <hr class="d-md-none my-2">
+                        <div class="d-sm-flex">
+                            <button class="btn btn-warning btn-lg rounded-pill w-100 w-md-auto ms-sm-3"
+                                type="button">Ara</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-7 order-lg-2 mb-lg-0 mb-4 pb-2 pb-lg-0 mt-md-4 mt-sm-4"><img class="d-block mx-auto"
+                    src="img/city-guide/home/hero-img.jpg" width="746" alt="Hero image"></div>
+        </div>
+    </section>
+    <!-- Oteller-->
+    <section class="container d-flex flex-wrap flex-column flex-sm-row pb-5 mb-md-3"><a
+            class="icon-box card flex-row align-items-center flex-shrink-0 card-hover border-0 shadow-sm rounded-pill py-2 ps-2 pe-4 mb-2 mb-sm-3 me-sm-3 me-xxl-4"
+            href="/hotels">
+            <div class="icon-box-media bg-faded-accent text-accent rounded-circle me-2"><i class="fi-bed"></i></div>
+            <h3 class="icon-box-title fs-sm ps-1 pe-2 mb-0">Bütün Otelleri Keşfet</h3>
+        </a>   
+    </section>
+    <!-- Reklamlar-->
+    <section class="container mb-sm-5 mb-4 pb-lg-4">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 pb-2">
+            <h2 class="h3 mb-sm-0">Fırsatlar</h2><a class="btn btn-link fw-normal ms-sm-3 p-0"
+                href="/hotels">Hepsini göster<i class="fi-arrow-long-right ms-2"></i></a>
+        </div>
+        <div class="tns-carousel-wrapper tns-controls-outside-xxl tns-nav-outside">
+            <div class="tns-carousel-inner"
+                data-carousel-options="{&quot;items&quot;: 3, &quot;gutter&quot;: 24, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1,&quot;nav&quot;:true},&quot;500&quot;:{&quot;items&quot;:2},&quot;850&quot;:{&quot;items&quot;:3},&quot;1400&quot;:{&quot;items&quot;:3,&quot;nav&quot;:false}}}">
+                <!-- Item-->
+                <div>
+                    <div class="position-relative">
+                        <div class="position-relative mb-3">
+                            <button
+                                class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5"
+                                type="button" data-bs-toggle="tooltip" data-bs-placement="left"
+                                title="Favorilere Ekle"><i class="fi-heart"></i></button><img class="rounded-3"
+                                src="img/city-guide/catalog/01.jpg" alt="Image">
+                        </div>
+                        <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" href="/hotels">Berlin
+                                Business Hotel</a></h3>
+                        <ul class="list-inline mb-0 fs-xs">
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>5.0</b><span
+                                    class="text-muted">&nbsp;(48)</span></li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$</li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>1.4 km from center
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div>
+                    <div class="position-relative">
+                        <div class="position-relative mb-3">
+                            <button
+                                class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5"
+                                type="button" data-bs-toggle="tooltip" data-bs-placement="left"
+                                title="Favorilere Ekle"><i class="fi-heart"></i></button><img class="rounded-3"
+                                src="img/city-guide/catalog/02.jpg" alt="Image">
+                        </div>
+                        <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" href="/hotels">Big Tree
+                                Cottage</a></h3>
+                        <ul class="list-inline mb-0 fs-xs">
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.8</b><span
+                                    class="text-muted">&nbsp;(24)</span></li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$$</li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>0.5 km from center
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div>
+                    <div class="position-relative">
+                        <div class="position-relative mb-3">
+                            <button
+                                class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5"
+                                type="button" data-bs-toggle="tooltip" data-bs-placement="left"
+                                title="Favorilere Ekle"><i class="fi-heart"></i></button><img class="rounded-3"
+                                src="img/city-guide/catalog/03.jpg" alt="Image">
+                        </div>
+                        <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" href="/hotels">Grand
+                                Resort &amp; Spa</a></h3>
+                        <ul class="list-inline mb-0 fs-xs">
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.9</b><span
+                                    class="text-muted">&nbsp;(43)</span></li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$$</li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>1.8 km from center
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Item-->
+                <div>
+                    <div class="position-relative">
+                        <div class="position-relative mb-3">
+                            <button
+                                class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5"
+                                type="button" data-bs-toggle="tooltip" data-bs-placement="left"
+                                title="Favorilere Ekle"><i class="fi-heart"></i></button><img class="rounded-3"
+                                src="img/city-guide/catalog/04.jpg" alt="Image">
+                        </div>
+                        <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" href="/hotels">Merry
+                                Berry Motel</a></h3>
+                        <ul class="list-inline mb-0 fs-xs">
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.5</b><span
+                                    class="text-muted">&nbsp;(13)</span></li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$</li>
+                            <li class="list-inline-item pe-1"><i
+                                    class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>0.4 km from center
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner + Where to eat-->
+    <div class="container mb-5 pb-lg-4">
+        <div class="row">
+            <!-- Banner-->
+            <div class="col-lg-4 text-center text-lg-start mb-lg-0 mb-5"><a
+                    class="d-block text-decoration-none bg-faded-accent rounded-3 h-100" href="https://www.google.com/search?q=berlin+taxi&tbm=lcl&sxsrf=APwXEddD33I4jc0MC0sVuhOhjE41Auch7w%3A1685805150939&ei=Xlh7ZLz2OIPVkwXUmYCABQ&ved=0ahUKEwi8nbrJsaf_AhWD6qQKHdQMAFAQ4dUDCAk&uact=5&oq=berlin+taxi&gs_lcp=Cg1nd3Mtd2l6LWxvY2FsEAMyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyBQgAEIAEMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBOgQIIxAnUIkOWLMXYI0kaABwAHgAgAFXiAHaA5IBATaYAQCgAQHAAQE&sclient=gws-wiz-local#rlfi=hd:;si:;mv:[[52.578554999999994,13.6166196],[52.421475,13.2885571]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:14">
+                    <div class="p-4">
+                        <h2 class="mb-0 p-2 text-primary text-nowrap"><i
+                                class="fi-phone mt-n1 me-2 pe-1 fs-3 align-middle"></i>Taxi<span
+                                class="text-dark">&nbsp;488</span></h2>
+                        <p class="mb-0 p-2 fs-lg text-body">Gideceğin yere ulaşmanın en kolay yolu!</p>
+                    </div><img src="img/city-guide/illustrations/taxi.svg" alt="Illustration">
+                </a></div>
+            <!-- Where to eat-->
+            <div class="col-lg-8">
+                <div class="d-flex align-items-center justify-content-between mb-4 pb-2">
+                    <h2 class="h3 mb-0">Where to eat</h2><a class="btn btn-link fw-normal p-0"
+                        href="/hotels">View all<i class="fi-arrow-long-right ms-2"></i></a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative mb-4"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/01.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">Pina Pizza Restaurant</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>5.0</b><span
+                                            class="text-muted">&nbsp;(48)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$</li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>1.4 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative mb-4"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/02.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">KFC</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.0</b><span
+                                            class="text-muted">&nbsp;(18)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$</li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>1.8 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative mb-4"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/03.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">Yum Restaurant</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>4.6</b><span
+                                            class="text-muted">&nbsp;(48)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$</li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>2.4 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative mb-4"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/04.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">Tosaka Sushi Bar</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>5.0</b><span
+                                            class="text-muted">&nbsp;(28)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$$
+                                    </li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>2.5 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative mb-4"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/05.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">Dunkin' Donuts</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>5.0</b><span
+                                            class="text-muted">&nbsp;(43)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$</li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>1.8 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Item-->
+                        <div class="d-flex align-items-start position-relative"><img
+                                class="flex-shrink-0 me-3 rounded-3" src="img/city-guide/brands/06.svg"
+                                alt="Brand logo">
+                            <div>
+                                <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link"
+                                        href="/hotels">Spicy Bar-Restaurant</a></h3>
+                                <ul class="list-unstyled mb-0 fs-xs">
+                                    <li><i
+                                            class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>5.0</b><span
+                                            class="text-muted">&nbsp;(32)</span></li>
+                                    <li><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>$$$
+                                    </li>
+                                    <li><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>0.4 km from
+                                        center</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <%- include('./partials/footer.ejs') %>

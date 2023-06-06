@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Visit Germany | Hotel Guide</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Çevrimiçi Seyahat Acentesi">
+    <meta name="keywords" content="Çevrimiçi Seyahat Acentesi">
+    <meta name="author" content="Çevrimiçi Seyahat Acentesi">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo/logo.png">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/stars.css">
+    <link rel="stylesheet" href="/style/random.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="/vendor/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/filepond/dist/filepond.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" media="screen" href="/vendor/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/nouislider/dist/nouislider.min.css"/>
+    <link rel="stylesheet" media="screen" href="/vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="/vendor/tiny-slider/dist/tiny-slider.css" />
+
+
+
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="/style/theme.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+<!-- Body-->
+
+<body>
+  <% if (success && success.length> 0) { %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong>
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <% } %>
+  <% if (error && error.length> 0) { %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Hata!</strong>
+    <%= error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <% } %>
+
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Yükleniyor...</span>
+    </div>
+  </div>
+  <main class="page-wrapper">
+
+    <!-- Navbar-->
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-scroll-header style="z-index: 1056;">
+      <div class="container">
+        <a class="navbar-brand me-3 me-xl-4" href="/">
+          <div>
+            <a class="d-inline-block" href="/">
+              <img src="/img/logo/logo.png" width="100" alt="Logo" class="rounded-2">
+          </a>
+          </div>
+        </a>
+
+
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <% if (currentUser) { %>
+        <a class="btn btn-sm text-primary d-none d-lg-block order-lg-3" href="/user/user-page">
+          <i class="fi-user me-2"></i>
+          <%= currentUser.username %>
+        </a>
+        <% } else {%>
+        <a class="btn btn-sm text-primary d-none d-lg-block order-lg-3" href="/login">
+          <i class="fi-user me-2"></i>
+          Giriş Yap
+        </a>
+        <% } %>
+        <a class="btn btn-info btn-sm rounded-pill ms-2 order-lg-3" href="/hotels/new">
+          <i class="fi-plus me-2"></i>Otel&nbsp;
+          <span class='d-none d-sm-inline'> Ekle</span>
+        </a>
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem;">
+            <!-- Demos switcher-->
+            <li class="nav-item dropdown me-lg-2"><a class="nav-link dropdown-toggle align-items-center pe-lg-4" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false"><i class="fi-layers me-2"></i>More<span class="d-none d-lg-block position-absolute top-50 end-0 translate-middle-y border-end" style="width: 1px; height: 30px;"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/"><i class="fi-home fs-base opacity-50 me-2"></i>Home</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/hotels"><i class="fi-building fs-base opacity-50 me-2"></i>All
+                    Oteller</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/hotels/new"><i class="fi-map-pin fs-base opacity-50 me-2"></i>Otel
+                    Ekle</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <% if (currentUser) { %>
+                <li><a class="dropdown-item" href="#">
+                    <i class="fi-user fs-base opacity-50 me-2"></i>
+                    <%= currentUser.name%>
+                  </a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout">
+                    <i class="fi-user fs-base opacity-50 me-2"></i>
+                    Çıkış Yap
+                  </a></li>
+                <% } else {%>
+                <li><a class="dropdown-item" href="/login">
+                    <i class="fi-user fs-base opacity-50 me-2"></i>
+                    Giriş yap
+                  </a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/register">
+                    <i class="fi-user fs-base opacity-50 me-2"></i>
+                    Üye Ol
+                  </a></li>
+                <% }%>
+              </ul>
+            </li>
+            <!-- Menu items-->
+            <li class="nav-item active"><a class="nav-link" href="/" role="button">Anasayfa</a>
+            </li>
+            <li class="nav-item "><a class="nav-link" href="/hotels" role="button">Oteller</a>
+
+            </li>
+
+            <li class="nav-item d-lg-none">
+              <% if (currentUser) { %>
+              <%= currentUser.username %>
+            </li>
+            <% } else {%>
+            <a class="nav-link" href="/login">
+              <i class="fi-user me-2"></i>
+              Giriş Yap</a>
+              <% }%>
+          </ul>
+        </div>
+      </div>
+    </header>

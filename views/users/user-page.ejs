@@ -1,0 +1,91 @@
+<%- include('../partials/header.ejs') %>
+<!-- Page container-->
+<div class="container mt-5 mb-md-4 py-5">
+    <!-- Breadcrumbs-->
+    <nav class="mb-4 pt-2 pt-lg-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a href="#">Hesabım</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Kişisel Bilgiler</li>
+        </ol>
+    </nav>
+    <!-- Account header-->
+    <div class="d-flex align-items-center justify-content-between pb-4 mb-2">
+        <div class="d-flex align-items-center">
+            <div class="position-relative flex-shrink-0"><img class="rounded-circle border border-white"
+                    src="/img/avatars/17.png" width="100" alt="Annette Black">
+                <button class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm position-absolute end-0 bottom-0"
+                    type="button" data-bs-toggle="tooltip" title="Change image"><i class="fi-pencil fs-xs"></i></button>
+            </div>
+            <div class="ps-3 ps-sm-4">
+                <h3 class="h4 mb-2"><%= currentUser.name %></h3><span class="star-rating"><i
+                        class="star-rating-icon fi-star-filled active"></i><i
+                        class="star-rating-icon fi-star-filled active"></i><i
+                        class="star-rating-icon fi-star-filled active"></i><i
+                        class="star-rating-icon fi-star-filled active"></i><i
+                        class="star-rating-icon fi-star-filled active"></i></span>
+            </div>
+        </div><a class="nav-link p-0 d-none d-md-block" href="/logout"><i
+                class="fi-logout mt-n1 me-2"></i>Çıkış yap</a>
+    </div>
+    <!-- Page content-->
+    <div class="card card-body p-4 p-md-5 shadow-sm">
+        
+        <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-4 pt-2">
+            <h1 class="h3 mb-0">Kişisel Bilgiler</h1>
+        </div>
+        <div class="border rounded-3 p-3 mb-2" id="personal-info">
+            <!-- Name-->
+            <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="pe-2">
+                        <label class="form-label fw-bold">Adınız</label>
+                        <div id="name-value"><%= currentUser.name %></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Email-->
+            <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="pe-2">
+                        <label class="form-label fw-bold">Email</label>
+                        <div id="email-value"><%= currentUser.username %></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Phone number-->
+            <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="pe-2">
+                        <label class="form-label fw-bold">Telefon Numarası</label>
+                        <div id="phone-value">Not specified</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Address-->
+            <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="pe-2">
+                        <label class="form-label fw-bold">Adres</label>
+                        <div id="address-value">Not specified</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Password-->
+            <div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="pe-2">
+                        <label class="form-label fw-bold">Şifre</label>
+                        <div>********</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-4">
+            <button class="btn btn-link btn-sm px-0" type="button"><i class="fi-trash me-2"></i>Hesabı Sil</button>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>
